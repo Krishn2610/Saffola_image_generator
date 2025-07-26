@@ -17,56 +17,27 @@ st.title("Saffola Oats Image Generator")
 # Custom CSS - Simplified and refined for alignment
 st.markdown("""
 <style>
-/* Style for the Generate button */
+/* === Generate Button === */
 div.stButton > button {
-    background-color: #ffcc00; /* yellow */
+    background-color: #ffcc00;   /* Yellow */
     color: black;
     border: none;
     border-radius: 6px;
     height: 40px;
     font-weight: 600;
     font-size: 14px;
+    margin-top: 26px;
     cursor: pointer;
-    /* This is the key for alignment: adjust this value */
-    margin-top: 26px; /* Increased margin-top to push it down */
 }
-/* Style for the Generate button on hover */
 div.stButton > button:hover {
-    color: black; /* Ensure text remains black on hover */
-    background-color: #e6b800; /* Slightly darker yellow on hover for visual feedback */
-}
-/* Style for the Generate button on focus */
-div.stButton > button:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+    background-color: #e6b800;   /* Slightly darker yellow */
 }
 
-/* Target the internal input element within st.text_input on focus */
-.stTextInput input:focus {
-    outline: none !important; /* Remove the default outline */
-    box-shadow: none !important; /* Remove any default box shadow */
-    border: 1px solid #ccc !important; /* Set a subtle grey border on focus */
+/* === Optional: Light gray placeholder text === */
+input::placeholder {
+    color: #aaa;
+    opacity: 1;
 }
-
-/* Target the container for the text input on focus (for robustness) */
-[data-testid="stTextInput"] > div > div > input:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border: 1px solid #ccc !important;
-}
-
-/* Remove previous column-specific alignment CSS to avoid conflicts */
-/* div[data-testid="column"] > div:has(div.stButton) {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-}
-div[data-testid="stVerticalBlock"] > div.element-container:has(div.stButton) {
-    display: flex;
-    align-items: flex-end;
-} */
-
 </style>
 """, unsafe_allow_html=True)
 
